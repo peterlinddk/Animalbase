@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnimalBase 2026</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <main>
+      <h1>AnimalBase 2026</h1>
+
+      <p>
+        Filter:
+        <button class="filter" data-action="filter" data-filter="type:cat">Only Cats</button>
+        <button class="filter" data-action="filter" data-filter="type:dog">Only Dogs</button>
+        <button class="filter" data-action="filter" data-filter="star">Only Stars</button>
+        <button class="filter" data-action="filter" data-filter="*">all</button>
+        <!-- <button class="filter" data-action="filter" data-filter="age:13">only 13</button> -->
+      </p>
+      <p>
+        Search: <input type="search" name="searchField" id="searchField" data-action="search">
+        <select name="searchType" id="searchType" data-action="search">
+          <option value="all">all</option>
+          <option value="name">Name</option>
+          <option value="type">Type</option>
+          <option value="desc">Description</option>
+        </select>
+      </p>
+
+      <hr />
+
+      <table id="list">
+        <thead>
+          <tr id="sorting">
+            <th data-action="sort" data-sort-direction="asc" data-sort-by="winner">Winner</th>
+            <th data-action="sort" data-sort-direction="asc" data-sort-by="star">Star</th>
+            <th data-action="sort" data-sort-direction="asc" data-sort-by="name">Name</th>
+            <th data-action="sort" data-sort-direction="asc" data-sort-by="type">Type</th>
+            <th data-action="sort" data-sort-direction="asc" data-sort-by="desc">Description</th>
+            <th data-action="sort" data-sort-direction="asc" data-sort-by="age">Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- animal template will be copied and inserted here -->
+        </tbody>
+      </table>
+     
+      <hr />
+
+      <button id="btn-create" data-action="create">Create new...</button>
+    </main>
+
+    <dialog id="create-dialog">
+      <h1>Create new animal</h1>
+      <form action="" method="dialog" id="create-form">
+        <label for="create-name">Name:</label> <input type="text" id="create-name" name="name" placeholder="The animal's name - e.g. John">
+        <label for="create-name">Type:</label> <input type="text" id="create-type" name="type" placeholder="The animal's type - e.g. dog">
+        <label for="create-name">Description:</label> <input type="text" id="create-desc" name="desc">
+        <label for="create-name">Age:</label> <input type="number" id="create-age" name="age">
+        <label for="create-name">Star:</label> <input type="checkbox" id="create-star" name="star">
+        <label for="create-name">Winner:</label> <input type="checkbox" id="create-winner" name="winner">
+        <button>Create</button>
+      </form>
+
+    </dialog>  
+
+    <dialog id="update-dialog">
+      <h1>Update animal</h1>
+      <form action="" method="dialog" id="update-form">
+        <label for="create-name">Name:</label> <input type="text" id="update-name" name="name" placeholder="The animal's name - e.g. John">
+        <label for="create-name">Type:</label> <input type="text" id="update-type" name="type" placeholder="The animal's type - e.g. dog">
+        <label for="create-name">Description:</label> <input type="text" id="update-desc" name="desc">
+        <label for="create-name">Age:</label> <input type="number" id="update-age" name="age">
+        <label for="create-name">Star:</label> <input type="checkbox" id="update-star" name="star">
+        <label for="create-name">Winner:</label> <input type="checkbox" id="update-winner" name="winner">
+        <button>Update</button>
+      </form>
+
+    </dialog> 
+
+    <dialog id="delete-dialog">
+      <h1>Delete animal?</h1>
+      <p>Are you sure you want to delete the animal "<span id="delete-name"></span>"?</p>
+      <form action="" method="dialog" id="delete-form">
+        <button id="delete-cancel" type="button">Cancel</button>
+        <button id="delete-confirm" type="submit">Delete</button>
+      </form>
+    </dialog> 
+
+    <template id="animal">
+      <tr>
+        <td data-action="toggle" data-field="winner">🏆</td>
+        <td data-action="toggle" data-field="star">☆</td>
+        <td data-field="name">NAME</td>
+        <td data-field="type">TYPE</td>
+        <td data-field="desc">DESCRIPTION</td>
+        <td data-field="age">AGE</td>
+        <td data-action="delete">🗑️</td>
+      </tr>
+    </template>
+
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
