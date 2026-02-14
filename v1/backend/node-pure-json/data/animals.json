@@ -1,0 +1,56 @@
+[
+   {
+      "id": 0,
+      "name": "Mia V",
+      "desc": "black",
+      "type": "cat",
+      "age": 13,
+      "star": true,
+      "winner": false
+    },
+    {
+      "id": 1,
+      "name": "Mandu",
+      "desc": "growling",
+      "type": "cat",
+      "age": 13,
+      "star": false,
+      "winner": false
+    },
+    {
+      "id": 2,
+      "name": "Toothless",
+      "desc": "trained",
+      "type": "dragon",
+      "age": 25,
+      "star": false,
+      "winner": true
+    },
+    {
+      "id": 3, 
+      "name": "Scooby Doo",
+      "desc": "wondering",
+      "type": "dog",
+      "age": 58,
+      "star": false,
+      "winner": false
+    },
+    {
+      "id": 4,
+      "name": "Pluto",
+      "desc": "confused",
+      "type": "dog",
+      "age": 90,
+      "star": false,
+      "winner": true
+    },
+    {
+      "id": 5,
+      "name": "Horsey",
+      "desc": "horsing",
+      "type": "horse",
+      "age": 10,
+      "star": false,
+      "winner": false
+    }
+]

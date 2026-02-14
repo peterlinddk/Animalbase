@@ -1,0 +1,12 @@
+{
+  "name": "animalbase-pure-json",
+  "version": "1.0.0",
+  "description": "A REST-API backend for the animalbase, without any libraries, storing data in a JSON-file",
+  "license": "ISC",
+  "author": "Peter Lind (peterlinddk@gmail.com)",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --watch app.js"
+  }
+}
